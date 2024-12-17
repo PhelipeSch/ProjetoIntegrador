@@ -109,20 +109,6 @@ main {
     margin: 80px 90px;
 }
 
-footer{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding-bottom: 1%;
-    padding-left: 400px;
-    padding-right: 400px;
-}
-  
-footer .rodapeimg{
-    height: 50px;
-    width: auto;
-}
-
 .info{
     border-radius: 20px;
     border-style: none;
@@ -134,15 +120,6 @@ footer .rodapeimg{
     text-align: left;
     padding-top: 10px;
     padding-bottom: 5px;
-}
-  
-.rodap{
-    display: flex;
-    align-items: center;
-}
-.rodap h4{
-    color: black;
-    padding-right:10%;
 }
 
 #datas{
@@ -159,4 +136,79 @@ footer .rodapeimg{
 #dif{
     border-radius: 20px;
     border-style: none;
+}
+
+.login{
+    color: #141414;
+}
+
+#login{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.name input{
+    border-radius: 15px;
+    border: none;
+    width: 250px;
+    height: 40px;
+    padding-left: 15px;
+    background-color: #343740;
+    color: #b6b6b6;
+    margin-bottom: 15px;
+}
+
+.email input{
+    border-radius: 15px;
+    border: none;
+    width: 250px;
+    height: 40px;
+    padding-left: 15px;
+    background-color: #343740;
+    color: #b6b6b6;
+}
+
+.senha input {
+    border-radius: 15px;
+    border: none;
+    width: 250px;
+    height: 40px;
+    padding-left: 15px;
+    background-color: #343740;
+    color: #b6b6b6;
+    margin-top: 15px;
+}
+
+.entrar input{
+    cursor: pointer;
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(134, 243, 134);
+    color: #141414;
+}
+
+input::placeholder{
+    color: #b6b6b6;
+}
+
+.titulo_login{
+    color: #fafafa;
+}
+
+.caixa {
+    margin-top: 65px;
+}
+
+.caixa img{
+    width: 1000px;
+    height: 400px;
+}
+
+input:focus{
+    outline: none;
 }
