@@ -1,11 +1,238 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pesquisa no Campus</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: #0f513a;
+            background-size: cover;
+            height: 100%;
+            color: #fff;
+            font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        }
+
+        #TopImg {
+            width: 100%;
+            height: auto;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            opacity: 0.7;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            background-color: #343740;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        main {
+            background-size: cover;
+            height: 100%;
+            color: #fff;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 6%;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-list li {
+            margin-left: 32px;
+            font-style: bold;
+        }
+
+        .card-conteiner {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 100px;
+        }
+
+        .card {
+            width: 325px;
+            background-color: #343740;
+            border-style: none;
+            border-radius: 8px;
+            margin: 20px;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-style: none;
+            border-radius: 8px;
+        }
+
+        .card-content {
+            padding: 16px;
+        }
+
+        .card-content h3 {
+            font-size: 26px;
+            margin-bottom: 8px;
+        }
+
+        .card-content p {
+            font-size: 15px;
+            line-height: 1, 3;
+        }
+
+        .card-content .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: gray;
+            border-radius: 4px;
+            margin-top: 16px;
+        }
+
+        .titulo {
+            font-size: 100px;
+            padding: 40px;
+        }
+
+        .paragrafo {
+            font-size: 25px;
+            padding: 9px;
+            margin: 80px 90px;
+        }
+
+        .info {
+            border-radius: 20px;
+            border-style: none;
+            margin-top: 7%;
+        }
+
+        .lin {
+            font-size: 25px;
+            text-align: left;
+            padding-top: 10px;
+            padding-bottom: 5px;
+        }
+
+        #datas {
+            justify-content: center;
+            padding-left: 300px;
+            padding-right: 300px;
+            padding-bottom: 20px;
+        }
+
+        .diferente {
+            text-decoration: underline;
+        }
+
+        #dif {
+            border-radius: 20px;
+            border-style: none;
+        }
+
+        .login {
+            color: #141414;
+        }
+
+        #login {
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .name input {
+            border-radius: 15px;
+            border: none;
+            width: 250px;
+            height: 40px;
+            padding-left: 15px;
+            background-color: #343740;
+            color: #b6b6b6;
+            margin-bottom: 15px;
+        }
+
+        .email input {
+            border-radius: 15px;
+            border: none;
+            width: 250px;
+            height: 40px;
+            padding-left: 15px;
+            background-color: #343740;
+            color: #b6b6b6;
+        }
+
+        .senha input {
+            border-radius: 15px;
+            border: none;
+            width: 250px;
+            height: 40px;
+            padding-left: 15px;
+            background-color: #343740;
+            color: #b6b6b6;
+            margin-top: 15px;
+        }
+
+        .entrar input {
+            cursor: pointer;
+            width: 120px;
+            height: 40px;
+            border-radius: 20px;
+            border: none;
+            background-color: rgb(134, 243, 134);
+            color: #141414;
+        }
+
+        input::placeholder {
+            color: #b6b6b6;
+        }
+
+        .titulo_login {
+            color: #fafafa;
+        }
+
+        .caixa {
+            margin-top: 65px;
+        }
+
+        .caixa img {
+            width: 1000px;
+            height: 400px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <img id="TopImg" src="IMG/IMG_Correta.png">
@@ -31,30 +258,45 @@
             </h1>
 
             <p class="paragrafo">
-                Nosso grupo desenvolveu um formulário que foi aplicado no IFRS Campus Erechim com o objetivo de entender melhor o perfil
-                dos estudantes e identificar fatores que influenciam o ingresso nos cursos técnicos integrados. Além disso, buscamos informações
-                sobre outros programas Pré-IF existentes em diferentes regiões, visando ampliar o conhecimento sobre iniciativas similares e promover
-                melhorias no programa local. Esses dados são essenciais para fortalecer ações que incentivem a preparação de estudantes de diversas escolas
+                Nosso grupo desenvolveu um formulário que foi aplicado no IFRS Campus Erechim com o objetivo de entender
+                melhor o perfil
+                dos estudantes e identificar fatores que influenciam o ingresso nos cursos técnicos integrados. Além
+                disso, buscamos informações
+                sobre outros programas Pré-IF existentes em diferentes regiões, visando ampliar o conhecimento sobre
+                iniciativas similares e promover
+                melhorias no programa local. Esses dados são essenciais para fortalecer ações que incentivem a
+                preparação de estudantes de diversas escolas
                 e contextos socioeconômicos, reforçando o compromisso com a inclusão e a equidade educacional.
             </p>
 
             <p class="paragrafo">
-                Nesse formulário, foram analisados os dados de 115 novos alunos do IFRS Campus Erechim. A maioria veio de escolas públicas estaduais,
-                com destaque para a Escola Estadual de Ensino Médio Prof. João Germano Imlau e a Escola Estadual de Ensino Médio Dr. João Caruso,
-                ambas com 15 aprovados. Entre as escolas municipais, a Escola Municipal de Ensino Fundamental Luiz Badalotti foi a mais representativa,
-                com 9 estudantes. No segmento privado, o Colégio Marista Medianeira, de Erechim, teve o maior número de ingressantes, com 8 alunos.
-                Já entre as escolas de fora de Erechim, a Escola Estadual de Ensino Médio de Campinas do Sul liderou, com 6 aprovados.
+                Nesse formulário, foram analisados os dados de 115 novos alunos do IFRS Campus Erechim. A maioria veio
+                de escolas públicas estaduais,
+                com destaque para a Escola Estadual de Ensino Médio Prof. João Germano Imlau e a Escola Estadual de
+                Ensino Médio Dr. João Caruso,
+                ambas com 15 aprovados. Entre as escolas municipais, a Escola Municipal de Ensino Fundamental Luiz
+                Badalotti foi a mais representativa,
+                com 9 estudantes. No segmento privado, o Colégio Marista Medianeira, de Erechim, teve o maior número de
+                ingressantes, com 8 alunos.
+                Já entre as escolas de fora de Erechim, a Escola Estadual de Ensino Médio de Campinas do Sul liderou,
+                com 6 aprovados.
             </p>
 
             <p class="paragrafo">
-                Esses dados mostram a grande procura pelos cursos do campus e a diversidade de escolas entre os aprovados.
-                Apesar de duas escolas estaduais liderarem em aprovações, o número de inscritos dessas instituições foi muito maior.
-                Nas escolas privadas, o número de inscritos foi menor, mas as taxas de aprovação foram mais altas, garantindo posições de destaque.
-                Esse cenário reforça a importância de ampliar o acesso aos cursos técnicos integrados, evidenciando tanto a competitividade quanto a
-                desigualdade no processo seletivo, além da necessidade de iniciativas para igualar oportunidades para todos os estudantes.
+                Esses dados mostram a grande procura pelos cursos do campus e a diversidade de escolas entre os
+                aprovados.
+                Apesar de duas escolas estaduais liderarem em aprovações, o número de inscritos dessas instituições foi
+                muito maior.
+                Nas escolas privadas, o número de inscritos foi menor, mas as taxas de aprovação foram mais altas,
+                garantindo posições de destaque.
+                Esse cenário reforça a importância de ampliar o acesso aos cursos técnicos integrados, evidenciando
+                tanto a competitividade quanto a
+                desigualdade no processo seletivo, além da necessidade de iniciativas para igualar oportunidades para
+                todos os estudantes.
             </p>
         </center>
     </main>
-    
+
 </body>
+
 </html>

@@ -1,11 +1,238 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingresso no campus</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: #0f513a;
+            background-size: cover;
+            height: 100%;
+            color: #fff;
+            font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        }
+
+        #TopImg {
+            width: 100%;
+            height: auto;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            opacity: 0.7;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            background-color: #343740;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        main {
+            background-size: cover;
+            height: 100%;
+            color: #fff;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 6%;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-list li {
+            margin-left: 32px;
+            font-style: bold;
+        }
+
+        .card-conteiner {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 100px;
+        }
+
+        .card {
+            width: 325px;
+            background-color: #343740;
+            border-style: none;
+            border-radius: 8px;
+            margin: 20px;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-style: none;
+            border-radius: 8px;
+        }
+
+        .card-content {
+            padding: 16px;
+        }
+
+        .card-content h3 {
+            font-size: 26px;
+            margin-bottom: 8px;
+        }
+
+        .card-content p {
+            font-size: 15px;
+            line-height: 1, 3;
+        }
+
+        .card-content .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: gray;
+            border-radius: 4px;
+            margin-top: 16px;
+        }
+
+        .titulo {
+            font-size: 100px;
+            padding: 40px;
+        }
+
+        .paragrafo {
+            font-size: 25px;
+            padding: 9px;
+            margin: 80px 90px;
+        }
+
+        .info {
+            border-radius: 20px;
+            border-style: none;
+            margin-top: 7%;
+        }
+
+        .lin {
+            font-size: 25px;
+            text-align: left;
+            padding-top: 10px;
+            padding-bottom: 5px;
+        }
+
+        #datas {
+            justify-content: center;
+            padding-left: 300px;
+            padding-right: 300px;
+            padding-bottom: 20px;
+        }
+
+        .diferente {
+            text-decoration: underline;
+        }
+
+        #dif {
+            border-radius: 20px;
+            border-style: none;
+        }
+
+        .login {
+            color: #141414;
+        }
+
+        #login {
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .name input {
+            border-radius: 15px;
+            border: none;
+            width: 250px;
+            height: 40px;
+            padding-left: 15px;
+            background-color: #343740;
+            color: #b6b6b6;
+            margin-bottom: 15px;
+        }
+
+        .email input {
+            border-radius: 15px;
+            border: none;
+            width: 250px;
+            height: 40px;
+            padding-left: 15px;
+            background-color: #343740;
+            color: #b6b6b6;
+        }
+
+        .senha input {
+            border-radius: 15px;
+            border: none;
+            width: 250px;
+            height: 40px;
+            padding-left: 15px;
+            background-color: #343740;
+            color: #b6b6b6;
+            margin-top: 15px;
+        }
+
+        .entrar input {
+            cursor: pointer;
+            width: 120px;
+            height: 40px;
+            border-radius: 20px;
+            border: none;
+            background-color: rgb(134, 243, 134);
+            color: #141414;
+        }
+
+        input::placeholder {
+            color: #b6b6b6;
+        }
+
+        .titulo_login {
+            color: #fafafa;
+        }
+
+        .caixa {
+            margin-top: 65px;
+        }
+
+        .caixa img {
+            width: 1000px;
+            height: 400px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <img id="TopImg" src="IMG/IMG_Correta.png">
@@ -26,43 +253,55 @@
 
     <main>
         <center>
-        <h1 class="titulo">
-            Datas e sites importantes durante o processo seletivo
-        </h1>
-        <p class="paragrafo">
-            Durante o processo seletivo senti falta de algum lugar mais acessível e descontraido em que eu pudesse me informar
-            então decidi criar esse ambiente aqui mesmo no site do Pré-IFRS pois o principal objetivo do nosso grupo de PI além de 
-            melhorar o Pré-IFRS é facilitar e ajudar cada vez mais estudantes a entrarem no IFRS Campus Erechim.
-        </p>
+            <h1 class="titulo">
+                Datas e sites importantes durante o processo seletivo
+            </h1>
+            <p class="paragrafo">
+                Durante o processo seletivo senti falta de algum lugar mais acessível e descontraido em que eu pudesse
+                me informar
+                então decidi criar esse ambiente aqui mesmo no site do Pré-IFRS pois o principal objetivo do nosso grupo
+                de PI além de
+                melhorar o Pré-IFRS é facilitar e ajudar cada vez mais estudantes a entrarem no IFRS Campus Erechim.
+            </p>
 
-        <h1 class="titulo">
-            Datas importantes!
-        </h1>
+            <h1 class="titulo">
+                Datas importantes!
+            </h1>
 
-        <ul id="datas">
-            <li class="lin"><b>Período de inscrições:</b> 26/09 a 14/10/2024</li>
-            <li class="lin"><b>Último dia para o pgagamento do boleto da prova: </b>15/10/2024</li>
-            <li class="lin"><b>Lista preliminar dos inscritos: </b>16/10/2024</li>
-            <li class="lin"><b>Entrada com recursos perante a lista de inscritos: </b>17/10/2024</li>
-            <li class="lin"><b>Lista FINAL de inscritos: </b>21/10/2024</li>
-            <li class="lin"><b>Sorteio para Técnico em Química: </b>12/11/2024</li>
-            <li class="lin"><b>Publicação dos locais de prova: </b>18/11/2024</li>
-            <li class="lin"><b>Dia da prova: </b>24/11/2024</li>
-        </ul>
+            <ul id="datas">
+                <li class="lin"><b>Período de inscrições:</b> 26/09 a 14/10/2024</li>
+                <li class="lin"><b>Último dia para o pgagamento do boleto da prova: </b>15/10/2024</li>
+                <li class="lin"><b>Lista preliminar dos inscritos: </b>16/10/2024</li>
+                <li class="lin"><b>Entrada com recursos perante a lista de inscritos: </b>17/10/2024</li>
+                <li class="lin"><b>Lista FINAL de inscritos: </b>21/10/2024</li>
+                <li class="lin"><b>Sorteio para Técnico em Química: </b>12/11/2024</li>
+                <li class="lin"><b>Publicação dos locais de prova: </b>18/11/2024</li>
+                <li class="lin"><b>Dia da prova: </b>24/11/2024</li>
+            </ul>
 
-        <img class="info" src="IMG/PS-2025.png">
+            <img class="info" src="IMG/PS-2025.png">
 
-        <p class="paragrafo">
-            Além dessas datas importantes e necessárias para a entranda de qualquer estudante seja para Técnico Integrado, Subsequente ou Graduação
-            também é importante saber sobre os conteúdos que serão abordados no seu curso e isso é acessível no seite do campus ou através desse link
-            <b><a class="diferente" href="https://ifrs.edu.br/erechim/cursos/">clique aqui</a></b>. Aconselho a lerem o PPC do seu curso e a matriz curricular, assim já
-            terá uma boa base sobre que rumo seu curso tomará até o fim dele. Acredito que também será interessante acompanhar o site do Ingresso IFRS que todas as informações oficiais sobre o processo seletivo serão postadas por lá 
-            <b><a class="diferente" href="https://ingresso.ifrs.edu.br/2025/">clique aqui</a></b>. Se você quiser estudar para a prova existem duas principais opções que
-            são estudar pelas provas antigas com os gabaritos <b><a class="diferente" href="https://ingresso.ifrs.edu.br/2025/provas-e-gabaritos-anteriores/">clique aqui</a></b>,
-            ou pelos atual Pré-IFRS <b><a class="diferente" href="https://moodle.ifrs.edu.br/course/index.php?categoryid=34&_gl=1*1vyvzw5*_ga*MjE0NjI4NDE5Ni4xNzIxODU5NzUx*_ga_F5GDL7KJVK*MTcyNzU3MzA0NS4xLjAuMTcyNzU3MzA0NS4wLjAuMA..">clique aqui</a></b>
-        </p>
+            <p class="paragrafo">
+                Além dessas datas importantes e necessárias para a entranda de qualquer estudante seja para Técnico
+                Integrado, Subsequente ou Graduação
+                também é importante saber sobre os conteúdos que serão abordados no seu curso e isso é acessível no
+                seite do campus ou através desse link
+                <b><a class="diferente" href="https://ifrs.edu.br/erechim/cursos/">clique aqui</a></b>. Aconselho a
+                lerem o PPC do seu curso e a matriz curricular, assim já
+                terá uma boa base sobre que rumo seu curso tomará até o fim dele. Acredito que também será interessante
+                acompanhar o site do Ingresso IFRS que todas as informações oficiais sobre o processo seletivo serão
+                postadas por lá
+                <b><a class="diferente" href="https://ingresso.ifrs.edu.br/2025/">clique aqui</a></b>. Se você quiser
+                estudar para a prova existem duas principais opções que
+                são estudar pelas provas antigas com os gabaritos <b><a class="diferente"
+                        href="https://ingresso.ifrs.edu.br/2025/provas-e-gabaritos-anteriores/">clique aqui</a></b>,
+                ou pelos atual Pré-IFRS <b><a class="diferente"
+                        href="https://moodle.ifrs.edu.br/course/index.php?categoryid=34&_gl=1*1vyvzw5*_ga*MjE0NjI4NDE5Ni4xNzIxODU5NzUx*_ga_F5GDL7KJVK*MTcyNzU3MzA0NS4xLjAuMTcyNzU3MzA0NS4wLjAuMA..">clique
+                        aqui</a></b>
+            </p>
 
         </center>
     </main>
 </body>
+
 </html>
